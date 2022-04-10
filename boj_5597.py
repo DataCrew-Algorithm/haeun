@@ -7,6 +7,3 @@ nums = [int(input()) for i in range(28)]
 for i in range(len(all_nums)):
     if all_nums[i] not in nums:
         print(all_nums[i])
-
-
-
