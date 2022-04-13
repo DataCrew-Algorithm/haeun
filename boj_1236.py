@@ -30,11 +30,3 @@ for j in range(c):
     if column[j] == 0:
         column_count += 1
 print(max(row_count, column_count))
-
-
-# matrix = [[0]*c for i in range(r)]
-# print(matrix)
-# word = "strawberry"
-# word[1] = "h"
-# print(word[1])
-# TypeError: 'str' object does not support item assignment
