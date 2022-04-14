@@ -3,19 +3,20 @@
 # 마지막에 가져가는 사람이 이긴다.
 
 # 3a + b = N
-# Ver.1 : fail
+# Ver.1 : 72ms
 
-# N = int(input())
+N = int(input())
 
-# def stone_game(N):
-#     split_n = N // 3
-#     remainder = N % 3
-#     if (split_n + remainder) % 2 == 1:
-#         return print("SK")
-#     else:
-#         return print("CY")
+def stone_game(N):
+    split_n = N // 3  # 몫
+    remainder = N % 3 # 나머지
+    if (split_n + remainder) % 2 == 1:
+        return print("SK")
+    else:
+        return print("CY")
 
-# stone_game(N)
+stone_game(N)
+
 
 
 # Ver.2 : 76ms
