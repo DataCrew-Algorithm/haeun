@@ -1,15 +1,6 @@
 # BABBA
 # 버튼 1번: A -> B, B-> BA
 
-# s = "hihh"
-# s = s.replace("h", "H")
-# print(s.count("H"))
-
-k = 3
-s = "A"
-# new_b = ""
-# new_a = ""
-
 # for _ in range(k):
 #     if "B" in s:
 #         s = s.replace("B", "BA")
@@ -50,19 +41,13 @@ s = "A"
 #         s0 = s1
 #         s1 = s
 #     print(s.count("A"), s.count("B"))
+# -------------------------------------------------------------------
 
 # Ver3.
-A, B = 0, 1 # 피보나치 수는 0과 1로 시작
-ab_list = [0, 0] # 수열 생성에 사용할 리스트
+A, B = 0, 1 # A, B를 0과 1로 변환 (피보나치 수열 초깃값) 
+ab_list = [0, 0] # 바뀔 A, B 넘버 넣을 리스트
 for _ in range(2, int(input())+1):
-    ab_list[0] = B              # index 0은 n 번째 피보나치 수열
-    ab_list[1] = A + B   # index 1은 n+1 번째 피보나치 수열
+    ab_list[0] = B              
+    ab_list[1] = A + B   
     A, B = ab_list[0], ab_list[1] 
-print(A, B)
-
-# for i in range(2, 5):
-#     l[i] = l[i-2]+l[i-1]
-#     l.append(l[i])
-#     print(l)
-
-# n = int(input())
+print(A, B) # 최종 A, B 출력
