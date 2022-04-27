@@ -110,14 +110,17 @@ sum_target = int(input()) # 찾고자 하는 부분합
 
 count, start, end = 0, 0, ttl_num-1 # 카운트 수, 시작, 끝 포인터 설정
 
-# start를 차례대로 증가시키면서 반복
+
 while True:
+    # 시작 포인터, 끝 포인터가 가리키는 수의 합이 목표 숫자와 같으면 카운트에 +1 (경우의 수 count)
     if nums[start] + nums[end] == sum_target:
         count += 1
 
-    # end를 가능한 만큼 이동 시키기
+    # 시작 포인터, 끝 포인터가 가리키는 수의 합이 목표 숫자와 작으면, 시작 포인터를 1칸 이동
     if nums[start] + nums[end] < sum_target:
         start += 1
+
+    # 시작 포인터, 끝 포인터가 가리키는 수의 합이 목표 숫자와 작으면, 끝 포인터를 -1칸 이동
     else:
         end -= 1
 
