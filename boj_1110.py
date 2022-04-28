@@ -5,26 +5,26 @@
 # 0: 0 + 0 = 0 -> 0
 # 더한 값의 일의 자리 수가 새로운 숫자의 일의 자리가 되는데 나머지 값으로 구하면 됨
 
-# N = int(input())
-# tmp = N
-# count = 0
+N = int(input())
+tmp = N
+count = 0
 
-# while True:
-#     a = N // 10
-#     b = N % 10
-#     c = a + b
-#     new_N = 10 * b + c % 10
-#     count += 1
+while True:
+    a = N // 10
+    b = N % 10
+    c = a + b
+    new_N = 10 * b + c % 10
+    count += 1
     
-#     N = new_N
+    N = new_N
 
-#     if new_N == tmp:
-#         break
+    if new_N == tmp:
+        break
 
-# print(count)
+print(count)
 
 
-# 재귀함수를 이용한 풀이, 종료조건???
+# 재귀함수를 이용한 풀이, 종료조건? 을 설정하는게 어려워서 패스
 # count = 0
 
 # def recursive_num(n):
@@ -47,7 +47,3 @@
 #     recursive_num(e)
 
 # recursive_num(int(input()))
-
-a = 5
-b = 5 // 10
-print(b)
