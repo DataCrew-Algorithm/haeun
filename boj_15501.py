@@ -18,7 +18,7 @@ while nums != check_nums: # 다를 때만 반복
         print("bad puzzle")
         break
 
-# Ver2. 틀림
+# Ver2. 통과 (676ms)
 n = int(input())
 nums = list(map(int,input().split(" ")))
 check_nums = list(map(int,input().split(" ")))
@@ -27,7 +27,7 @@ idx = check_nums.index(nums[0])
 new_list1 = check_nums[idx:] + check_nums[:idx]             # 순방향 체크
 
 r_check_nums = check_nums[::-1]
-idx2 = check_nums.index(nums[0])
+idx2 = r_check_nums.index(nums[0])
 new_list2 = r_check_nums[idx2:] + r_check_nums[:idx2]       # 역방향 체크
 
 if nums == new_list1 or nums == new_list2:
@@ -36,7 +36,7 @@ if nums == new_list1 or nums == new_list2:
 else:    
     print("bad puzzle") 
 
-# Ver3. (통과 풀이)
+# Ver3. 통과 (884ms)
 
 import sys
 
