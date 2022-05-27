@@ -21,3 +21,9 @@ for i in range(N):
     i += 1
     case = input().split()
     print(f"Case #{i}:", " ".join(case[::-1])) # 뒤집은 문자열로 출력
+
+
+# Ver3. F 포맷팅 업데이트
+for i in range(N):
+    case = input().split()
+    print(f'Case #{i+1}: {" ".join(case[::-1])}')  # 뒤집은 문자열로 출력
