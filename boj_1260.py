@@ -38,7 +38,7 @@
 # print()
 # bfs(v)
 
-ver2
+# ver2
 from collections import deque
 
 N, M, V = map(int, input().split())
@@ -52,7 +52,7 @@ for _ in range(M):
 
 # 너비 우선 탐색
 def bfs(start_v):
-  discoverd = [start_v]
+  discovered = [start_v]
   queue = deque() 
   queue.append(start_v)
 
@@ -61,18 +61,18 @@ def bfs(start_v):
     print(v, end=' ')
 
     for w in range(len(graph[start_v])):
-      if graph[v][w] == 1 and (w not in discoverd):
-        discoverd.append(w)
+      if graph[v][w] == 1 and (w not in discovered):
+        discovered.append(w)
         queue.append(w)
 
 # 깊이 우선 탐색
-def dfs(start_v, discoverd=[]):
-  discoverd.append(start_v)
+def dfs(start_v, discovered=[]):
+  discovered.append(start_v)
   print(start_v, end=' ')
 
   for w in range(len(graph[start_v])):
-    if graph[start_v][w] == 1 and (w not in discoverd):
-      dfs(w, discoverd)
+    if graph[start_v][w] == 1 and (w not in discovered):
+      dfs(w, discovered)
 
 dfs(V)
 print()

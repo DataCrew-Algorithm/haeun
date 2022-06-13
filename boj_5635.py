@@ -17,9 +17,9 @@
 # print(day_list)
 # print(name_list)
 
-# import time
+import time
 import sys
-# start_time = time.time()
+start_time = time.time()
 input = sys.stdin.readline
 
 n = int(input())
@@ -38,10 +38,10 @@ for i in range(n):
 
 # 오름차순, 내림차순 외 특정 데이터로 sorting 가능한지 검색하여 찾음
 # 생년월일 기준으로 오름차순 정렬 됐는지 확인
-# print(sorted(id_list, key = lambda x: int(x[1])))
 id_list = sorted(id_list, key = lambda x: int(x[1]))
-print(id_list[-1][0]) # 가장 나이 어린 사람 이름
-print(id_list[0][0])  # 가장 나이 많은 사람 이름
+print(sorted(id_list, key = lambda x: int(x[1])))
+# print(id_list[-1][0]) # 가장 나이 어린 사람 이름
+# print(id_list[0][0])  # 가장 나이 많은 사람 이름
 
 # end_time = time.time()
 # print("time: ", end_time - start_time)

@@ -6,7 +6,7 @@
 
 logs = ["dig1 8 1 5 1", "let1 art can", "dig2 3 6", "let2 own kit dig", "let3 art zero"]
 
-식별자 구분을 위한 리스트 만들기
+# 식별자 구분을 위한 리스트 만들기
 def reorder_log(logs):
     let = []
     dig = []
