@@ -69,3 +69,27 @@ if nums == new_list1 or nums == new_list2:
     print("good puzzle")
 else:
     print("bad puzzle")
+
+
+
+
+# ver4: deque rotate function 활용하기
+
+from collections import deque
+import sys
+
+N = int(sys.stdin.readline())
+sequence_1 = deque(sys.stdin.readline().split())
+re_seq = deque(reversed(sequence_1))
+sequence_2 = deque(sys.stdin.readline().split())
+
+for _ in range(N):
+    if sequence_1 == sequence_2 or sequence_1 == re_seq:
+        print("good puzzle")
+        break
+
+    sequence_1.rotate(1)
+    re_seq.rotate(1)
+
+else:
+    print('bad puzzle')
