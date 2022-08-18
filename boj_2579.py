@@ -54,12 +54,12 @@
 
 # ver3. 인터넷 참고 풀이: 직전 칸이 n-1인지 n-2인지 생각하기
 
-import sys
-read = sys.stdin.readline
+# import sys
+# read = sys.stdin.readline
 
-n = int(input())
-scores = [int(read()) for _ in range(n)]
-print(scores)
+# n = int(input())
+# scores = [int(read()) for _ in range(n)]
+# print(scores)
 
 # 계단 1-3개 일때 입력해보면 2개일때 인덱스 에러나서 런타임 에러 발생!!
 # d = []
